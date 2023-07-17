@@ -1,0 +1,32 @@
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.exe.config
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.exe
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.pdb
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.csprojResolveAssemblyReference.cache
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Login.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Properties.Resources.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.csproj.GenerateResource.Cache
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.exe
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.pdb
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.HomeForm.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.EmployeeForm.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.SalaryForm.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.SettingsForm.resources
+C:\Charith Projects\Desktop Apps\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.AllEmployeesForm.resources
+C:\Projects\Other's\Finished Assignments\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.exe.config
+C:\Projects\Other's\Finished Assignments\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.exe
+C:\Projects\Other's\Finished Assignments\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.pdb
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.exe.config
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.exe
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.pdb
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.exe
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\bin\Debug\PayrollSystem.pdb
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.csprojResolveAssemblyReference.cache
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.AllEmployeesForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.EmployeeForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.SalaryForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.SettingsForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.HomeForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Login.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Properties.Resources.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.csproj.GenerateResource.Cache
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.DependentForm.resources
