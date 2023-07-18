@@ -14,7 +14,7 @@ namespace PayrollSystem
     public partial class AllEmployeesForm : Form
     {
         string connectionString = "Data Source=CHARITH\\SQLEXPRESS;" +
-                                   "Initial Catalog=GrifindoToys;" +
+                                   "Initial Catalog=GryfindoSystemV2;" +
                                    "Integrated Security=SSPI;";
 
         public AllEmployeesForm(string name)

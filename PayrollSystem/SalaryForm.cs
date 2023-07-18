@@ -14,7 +14,7 @@ namespace PayrollSystem
     public partial class SalaryForm : Form
     {
         Employee empl1 = new Employee();
-
+        private int noOfLeaves;
 
         public SalaryForm(string name)
         {
@@ -24,7 +24,7 @@ namespace PayrollSystem
         }
 
         string connectionString = "Data Source=CHARITH\\SQLEXPRESS;" +
-                                  "Initial Catalog=GrifindoToys;" +
+                                  "Initial Catalog=GryfindoSystemV2;" +
                                   "Integrated Security=SSPI;";
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -62,7 +62,8 @@ namespace PayrollSystem
                                 txtSalEndM.Text = salCycleEndDate.Month.ToString();
                                 txtSalEndY.Text = salCycleEndDate.Year.ToString();
 
-                                //txtNoOfLeaves.Text = reader["noOfLeaves"].ToString();
+                                // Read the value of noOfLeaves and store it in the variable
+                                noOfLeaves = Convert.ToInt32(reader["noOfLeaves"]);
                             }
                         }
                     }
@@ -75,7 +76,7 @@ namespace PayrollSystem
             }
         }
 
-        // retreive employee details
+        // retrieve employee details
         bool RetrieveEmployee(string connectionString, string employeeId)
         {
             try
@@ -118,48 +119,138 @@ namespace PayrollSystem
         private void CalculateSalary()
         {
             // Get the user inputs from the text boxes
-            int date_range = int.Parse(txtDateRange.Text);
-            int salery_begin_day = int.Parse(txtSalBeginD.Text);
-            int salery_begin_month = int.Parse(txtSalBeginM.Text);
-            int salery_begin_year = int.Parse(txtSalBeginY.Text);
-            int salary_end_day = int.Parse(txtSalEndD.Text);
-            int salary_end_month = int.Parse(txtSalEndM.Text);
-            int salary_end_year = int.Parse(txtSalEndY.Text);
-            int number_of_absent_days = int.Parse(txtNoOfAbsents.Text);
-            int number_of_holidays = int.Parse(txtHolidays.Text);
-            double ot_hours = double.Parse(txtOTHours.Text);
-            double gvt_tax_rate = double.Parse(txtGovtRate.Text);
-            double month_salary = empl1.MonthlySalary;
-            double allowances = empl1.Allowances;
-            double ot_rate = empl1.Ot_hourly;
-
-            // Calculate the salary cycle duration
-            DateTime salBeginDate = new DateTime(salery_begin_year, salery_begin_month, salery_begin_day);
-            DateTime salEndDate = new DateTime(salary_end_year, salary_end_month, salary_end_day);
-            TimeSpan salary_cycle_duration = salEndDate - salBeginDate;
-            int salary_cycle_date_range = salary_cycle_duration.Days + 1;
-
-            // Validate the entered salary cycle dates
-            if (salary_cycle_date_range != date_range)
+            int salaryBeginDay;
+            if (!int.TryParse(txtSalBeginD.Text, out salaryBeginDay))
             {
-                MessageBox.Show("Error in salary cycle dates when comparing differences of the dates and the date range. Please enter valid dates.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid salary cycle begin day. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            int salaryBeginMonth;
+            if (!int.TryParse(txtSalBeginM.Text, out salaryBeginMonth))
+            {
+                MessageBox.Show("Invalid salary cycle begin month. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int salaryBeginYear;
+            if (!int.TryParse(txtSalBeginY.Text, out salaryBeginYear))
+            {
+                MessageBox.Show("Invalid salary cycle begin year. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int salaryEndDay;
+            if (!int.TryParse(txtSalEndD.Text, out salaryEndDay))
+            {
+                MessageBox.Show("Invalid salary cycle end day. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int salaryEndMonth;
+            if (!int.TryParse(txtSalEndM.Text, out salaryEndMonth))
+            {
+                MessageBox.Show("Invalid salary cycle end month. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int salaryEndYear;
+            if (!int.TryParse(txtSalEndY.Text, out salaryEndYear))
+            {
+                MessageBox.Show("Invalid salary cycle end year. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int numberOfAbsentDays;
+            if (!int.TryParse(txtNoOfAbsents.Text, out numberOfAbsentDays))
+            {
+                MessageBox.Show("Invalid number of absent days. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int numberOfHolidays;
+            if (!int.TryParse(txtHolidays.Text, out numberOfHolidays))
+            {
+                MessageBox.Show("Invalid number of holidays. Please enter a valid integer value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double otHours;
+            if (!double.TryParse(txtOTHours.Text, out otHours))
+            {
+                MessageBox.Show("Invalid OT hours. Please enter a valid decimal value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double govtTaxRate;
+            if (!double.TryParse(txtGovtRate.Text, out govtTaxRate))
+            {
+                MessageBox.Show("Invalid government tax rate. Please enter a valid decimal value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double monthlySalary = empl1.MonthlySalary;
+            double allowances = empl1.Allowances;
+            double otRate = empl1.Ot_hourly;
+
+            // Calculate the salary cycle duration
+            DateTime salaryBeginDate;
+            try
+            {
+                salaryBeginDate = new DateTime(salaryBeginYear, salaryBeginMonth, salaryBeginDay);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid salary cycle begin date. Please enter a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DateTime salaryEndDate;
+            try
+            {
+                salaryEndDate = new DateTime(salaryEndYear, salaryEndMonth, salaryEndDay);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid salary cycle end date. Please enter a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            TimeSpan salaryCycleDuration = salaryEndDate - salaryBeginDate;
+            int salaryCycleDateRange = salaryCycleDuration.Days + 1;
+
+            // Calculate the total number of working days within the salary cycle date range
+            int totalWorkingDays = CalculateTotalWorkingDays(salaryBeginDate, salaryEndDate);
+
+            // Calculate the total number of leaves taken by the employee within the salary cycle date range
+            int totalAbsentDays = CalculateTotalAbsentDaysForEmployee(empl1.Id, salaryBeginDate, salaryEndDate);
+
+            // Calculate the no-pay value, considering the allowed absent days (noOfLeaves)
+            int noPayDays = Math.Max(totalAbsentDays - noOfLeaves, 0);
             // Calculate the no-pay value
-            double no_pay_value = (month_salary / salary_cycle_date_range) * number_of_absent_days;
+            double noPayValue = (monthlySalary / totalWorkingDays) * totalAbsentDays;
+
+            Console.WriteLine($"totalAbsentDays: {totalAbsentDays}");
+            Console.WriteLine($"noOfLeaves: {noOfLeaves}");
+            Console.WriteLine($"monthlySalary: {monthlySalary}");
+            Console.WriteLine($"totalWorkingDays: {totalWorkingDays}");
+            Console.WriteLine($"noPayDays: {noPayDays}");
+            Console.WriteLine($"noPayValue: {noPayValue}");
 
             // Calculate the base pay value
-            double base_pay_value = month_salary + allowances + (ot_rate * ot_hours);
+            double basePayValue = monthlySalary + allowances + (otRate * otHours);
 
             // Calculate the gross pay value
-            double gross_pay_value = base_pay_value - (no_pay_value + (base_pay_value * gvt_tax_rate));
+            double grossPayValue = basePayValue - (noPayValue + (basePayValue * govtTaxRate));
 
+
+            //Console.WriteLine(noPayValue);
             // Display the calculated values in the result text boxes
-            txtResultNoPay.Text = no_pay_value.ToString("#.##");
-            txtResultBasePay.Text = base_pay_value.ToString("#.##");
-            txtResultGrossPay.Text = gross_pay_value.ToString("#.##");
+            txtResultNoPay.Text = noPayValue.ToString("#.##");
+            txtResultBasePay.Text = basePayValue.ToString("#.##");
+            txtResultGrossPay.Text = grossPayValue.ToString("#.##");
         }
+
 
         bool search = false;
 
@@ -172,6 +263,8 @@ namespace PayrollSystem
                 search = false;
                 txtEmployeeId.Enabled = true;
                 clearValues();
+
+                
             }
             else
             {
@@ -182,6 +275,33 @@ namespace PayrollSystem
                     btnCalculate.Visible = true;
                     btnSearchEmp.Image = Properties.Resources.refresh;
                     txtEmployeeId.Enabled = false;
+
+
+                    // salaryBeginDate, salaryEndDate
+                    DateTime salaryBeginDate;
+                    try
+                    {
+                        salaryBeginDate = new DateTime(Convert.ToInt32(txtSalBeginY.Text), Convert.ToInt32(txtSalBeginM.Text), Convert.ToInt32(txtSalBeginD.Text));
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid salary cycle begin date. Please enter a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    DateTime salaryEndDate;
+                    try
+                    {
+                        salaryEndDate = new DateTime(Convert.ToInt32(txtSalEndY.Text), Convert.ToInt32(txtSalEndM.Text), Convert.ToInt32(txtSalEndD.Text));
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid salary cycle end date. Please enter a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    txtNoOfAbsents.Text = CalculateTotalAbsentDaysForEmployee(Convert.ToInt32(txtEmployeeId.Text), salaryBeginDate, salaryEndDate).ToString();
+                    txtHolidays.Text = (CalculateTotalHolidays(salaryBeginDate, salaryEndDate)).ToString();
                 }
                 else
                 {
@@ -199,6 +319,8 @@ namespace PayrollSystem
             empl1.MonthlySalary = 0;
             empl1.Id = 0;
             txtEmployeeId.Enabled = true;
+            txtNoOfAbsents.Text = "";
+            txtHolidays.Text = "";
 
             btnCalculate.Visible = false;
             btnInsertToDB.Visible = false;
@@ -214,10 +336,8 @@ namespace PayrollSystem
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-                throw;
+                MessageBox.Show("An error occurred during salary calculation: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void btnInsertToDB_Click(object sender, EventArgs e)
@@ -288,6 +408,7 @@ namespace PayrollSystem
                 MessageBox.Show("An error occurred while inserting the salary record. Error details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void ClearTextFields()
         {
             txtEmployeeId.Text = string.Empty;
@@ -311,5 +432,143 @@ namespace PayrollSystem
             this.Hide();
             frm.Show();
         }
+
+        private int CalculateTotalWorkingDays(DateTime startDate, DateTime endDate)
+        {
+            int totalWorkingDays = 0;
+
+            // Create a list to store holiday dates
+            List<DateTime> holidays = new List<DateTime>();
+
+            try
+            {
+                // Retrieve holidays from the "Holiday" table and add them to the list
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT HolidayStartDate, No_of_days FROM Holiday";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DateTime holidayStartDate = (DateTime)reader["HolidayStartDate"];
+                                int noOfDays = (int)reader["No_of_days"];
+                                for (int i = 0; i < noOfDays; i++)
+                                {
+                                    holidays.Add(holidayStartDate.AddDays(i));
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Calculate the total working days between startDate and endDate (inclusive)
+                for (DateTime currentDate = startDate; currentDate <= endDate; currentDate = currentDate.AddDays(1))
+                {
+                    if (currentDate.DayOfWeek != DayOfWeek.Saturday && currentDate.DayOfWeek != DayOfWeek.Sunday && !holidays.Contains(currentDate))
+                    {
+                        totalWorkingDays++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+            return totalWorkingDays;
+        }
+
+        private int CalculateTotalAbsentDaysForEmployee(int employeeID, DateTime startDate, DateTime endDate)
+        {
+            int totalAbsentDays = 0;
+
+            try
+            {
+                // Retrieve leaves from the "Leave" table for the specified employee and date range
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT LeaveStartDate, No_of_days FROM Leave WHERE EmployeeID=@EmployeeID AND LeaveStartDate BETWEEN @StartDate AND @EndDate";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@EmployeeID", employeeID);
+                        command.Parameters.AddWithValue("@StartDate", startDate);
+                        command.Parameters.AddWithValue("@EndDate", endDate);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DateTime leaveStartDate = (DateTime)reader["LeaveStartDate"];
+                                int noOfDays = (int)reader["No_of_days"];
+                                totalAbsentDays += noOfDays;
+                            }
+                        }
+                    }
+                }
+                txtNoOfAbsents.Text = totalAbsentDays.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+            return totalAbsentDays;
+        }
+
+        private int CalculateTotalHolidays(DateTime startDate, DateTime endDate)
+        {
+            int totalHolidays = 0;
+
+            // Create a list to store holiday dates
+            List<DateTime> holidays = new List<DateTime>();
+
+            try
+            {
+                // Retrieve holidays from the "Holiday" table and add them to the list
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT HolidayStartDate, No_of_days FROM Holiday";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DateTime holidayStartDate = (DateTime)reader["HolidayStartDate"];
+                                int noOfDays = (int)reader["No_of_days"];
+                                for (int i = 0; i < noOfDays; i++)
+                                {
+                                    holidays.Add(holidayStartDate.AddDays(i));
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Calculate the total holidays between startDate and endDate (inclusive)
+                for (DateTime currentDate = startDate; currentDate <= endDate; currentDate = currentDate.AddDays(1))
+                {
+                    if (holidays.Contains(currentDate))
+                    {
+                        totalHolidays++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+            return totalHolidays;
+        }
+
     }
 }

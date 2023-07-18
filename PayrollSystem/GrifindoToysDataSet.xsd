@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="GrifindoToysDataSet" targetNamespace="http://tempuri.org/GrifindoToysDataSet.xsd" xmlns:mstns="http://tempuri.org/GrifindoToysDataSet.xsd" xmlns="http://tempuri.org/GrifindoToysDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="GrifindoToysV2DataSet" targetNamespace="http://tempuri.org/GrifindoToysV2DataSet.xsd" xmlns:mstns="http://tempuri.org/GrifindoToysV2DataSet.xsd" xmlns="http://tempuri.org/GrifindoToysV2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GrifindoToysConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GrifindoToysConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PayrollSystem.Properties.Settings.GlobalReference.Default.GrifindoToysConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GrifindoToysV2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GrifindoToysV2ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PayrollSystem.Properties.Settings.GlobalReference.Default.GrifindoToysV2ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdminTableAdapter" GeneratorDataComponentClassName="AdminTableAdapter" Name="Admin" UserDataComponentName="AdminTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GrifindoToysConnectionString (Settings)" DbObjectName="GrifindoToys.dbo.Admin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="GrifindoToysV2ConnectionString (Settings)" DbObjectName="GrifindoToysV2.dbo.Admin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Admin] WHERE (([username] = @Original_username) AND ([password] = @Original_password))</CommandText>
@@ -57,7 +57,7 @@ SELECT username, password FROM Admin WHERE (username = @username)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeTableAdapter" GeneratorDataComponentClassName="EmployeeTableAdapter" Name="Employee" UserDataComponentName="EmployeeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GrifindoToysConnectionString (Settings)" DbObjectName="GrifindoToys.dbo.Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="GrifindoToysV2ConnectionString (Settings)" DbObjectName="GrifindoToysV2.dbo.Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Employee] WHERE (([EmployeeID] = @Original_EmployeeID) AND ([Emp_name] = @Original_Emp_name) AND ([Emp_dob] = @Original_Emp_dob) AND ([Emp_gender] = @Original_Emp_gender) AND ([Emp_phone] = @Original_Emp_phone) AND ([Emp_address] = @Original_Emp_address))</CommandText>
@@ -128,7 +128,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="GrifindoToysDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GrifindoToysDataSet" msprop:Generator_UserDSName="GrifindoToysDataSet">
+  <xs:element name="GrifindoToysV2DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GrifindoToysV2DataSet" msprop:Generator_UserDSName="GrifindoToysV2DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Admin" msprop:Generator_TableClassName="AdminDataTable" msprop:Generator_TableVarName="tableAdmin" msprop:Generator_TablePropName="Admin" msprop:Generator_RowDeletingName="AdminRowDeleting" msprop:Generator_RowChangingName="AdminRowChanging" msprop:Generator_RowEvHandlerName="AdminRowChangeEventHandler" msprop:Generator_RowDeletedName="AdminRowDeleted" msprop:Generator_UserTableName="Admin" msprop:Generator_RowChangedName="AdminRowChanged" msprop:Generator_RowEvArgName="AdminRowChangeEvent" msprop:Generator_RowClassName="AdminRow">

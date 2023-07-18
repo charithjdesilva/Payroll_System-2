@@ -26,10 +26,10 @@ namespace PayrollSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHARITH\\SQLEXPRESS;Initial Catalog=GrifindoToys;Integrated Security=True")]
-        public string GrifindoToysConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHARITH\\SQLEXPRESS;Initial Catalog=GryfindoSystemV2;Integrated Security=True")]
+        public string GrifindoToysV2ConnectionString {
             get {
-                return ((string)(this["GrifindoToysConnectionString"]));
+                return ((string)(this["GrifindoToysV2ConnectionString"]));
             }
         }
     }

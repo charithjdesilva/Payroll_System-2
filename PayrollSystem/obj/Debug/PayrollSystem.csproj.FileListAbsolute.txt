@@ -29,3 +29,6 @@ C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug
 C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Login.resources
 C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.Properties.Resources.resources
 C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.csproj.GenerateResource.Cache
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.DependentForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.FacultyForm.resources
+C:\Projects\Other's\Programming assignment\PayrollSystem\PayrollSystem\obj\Debug\PayrollSystem.DepartmentForm.resources

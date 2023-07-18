@@ -21,7 +21,7 @@ namespace PayrollSystem
         }
 
         string connectionString = "Data Source=CHARITH\\SQLEXPRESS;" +
-                                   "Initial Catalog=GrifindoToys;" +
+                                   "Initial Catalog=GryfindoSystemV2;" +
                                    "Integrated Security=SSPI;";
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace PayrollSystem
 {
-    partial class EmployeeForm
+    partial class DependentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,41 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DependentForm));
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnSearchEmp = new System.Windows.Forms.Button();
+            this.btnSearchDepenedent = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEmployeeId = new System.Windows.Forms.TextBox();
+            this.txtDependentId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rbGenderMale = new System.Windows.Forms.RadioButton();
             this.rbGenderFemale = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.txtEmployeeDobD = new System.Windows.Forms.TextBox();
-            this.txtEmployeeDobY = new System.Windows.Forms.TextBox();
-            this.txtEmployeeDobM = new System.Windows.Forms.TextBox();
+            this.txtDependentName = new System.Windows.Forms.TextBox();
+            this.txtDependentDobD = new System.Windows.Forms.TextBox();
+            this.txtDependentDobY = new System.Windows.Forms.TextBox();
+            this.txtDependentDobM = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtMontlySal = new System.Windows.Forms.TextBox();
-            this.txtOTRate = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtAllowances = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.pnlDelUpd = new System.Windows.Forms.Panel();
-            this.btnAllEmployees = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtOtherDependents = new System.Windows.Forms.TextBox();
+            this.btnSearchEmp = new System.Windows.Forms.Button();
+            this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlDelUpd.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +128,7 @@
             this.lblName.Location = new System.Drawing.Point(261, 87);
             this.lblName.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(273, 20);
+            this.lblName.Size = new System.Drawing.Size(273, 34);
             this.lblName.TabIndex = 11;
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -155,26 +153,26 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnSearchEmp
+            // btnSearchDepenedent
             // 
-            this.btnSearchEmp.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchEmp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
-            this.btnSearchEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnSearchEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnSearchEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchEmp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchEmp.ForeColor = System.Drawing.Color.White;
-            this.btnSearchEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchEmp.Image")));
-            this.btnSearchEmp.Location = new System.Drawing.Point(342, 172);
-            this.btnSearchEmp.Margin = new System.Windows.Forms.Padding(8);
-            this.btnSearchEmp.Name = "btnSearchEmp";
-            this.btnSearchEmp.Padding = new System.Windows.Forms.Padding(8);
-            this.btnSearchEmp.Size = new System.Drawing.Size(34, 35);
-            this.btnSearchEmp.TabIndex = 1;
-            this.btnSearchEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearchEmp.UseVisualStyleBackColor = false;
-            this.btnSearchEmp.Click += new System.EventHandler(this.btnSearchEmp_Click);
+            this.btnSearchDepenedent.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchDepenedent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchDepenedent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.btnSearchDepenedent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnSearchDepenedent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnSearchDepenedent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchDepenedent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchDepenedent.ForeColor = System.Drawing.Color.White;
+            this.btnSearchDepenedent.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDepenedent.Image")));
+            this.btnSearchDepenedent.Location = new System.Drawing.Point(342, 172);
+            this.btnSearchDepenedent.Margin = new System.Windows.Forms.Padding(8);
+            this.btnSearchDepenedent.Name = "btnSearchDepenedent";
+            this.btnSearchDepenedent.Padding = new System.Windows.Forms.Padding(8);
+            this.btnSearchDepenedent.Size = new System.Drawing.Size(34, 35);
+            this.btnSearchDepenedent.TabIndex = 1;
+            this.btnSearchDepenedent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearchDepenedent.UseVisualStyleBackColor = false;
+            this.btnSearchDepenedent.Click += new System.EventHandler(this.btnSearchEmp_Click);
             // 
             // label3
             // 
@@ -196,20 +194,20 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(50, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 26);
+            this.label2.Size = new System.Drawing.Size(135, 26);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Employee ID";
+            this.label2.Text = "Dependent ID";
             // 
-            // txtEmployeeId
+            // txtDependentId
             // 
-            this.txtEmployeeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtEmployeeId.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtEmployeeId.ForeColor = System.Drawing.Color.White;
-            this.txtEmployeeId.Location = new System.Drawing.Point(200, 172);
-            this.txtEmployeeId.MaxLength = 20;
-            this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.Size = new System.Drawing.Size(132, 34);
-            this.txtEmployeeId.TabIndex = 0;
+            this.txtDependentId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtDependentId.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.txtDependentId.ForeColor = System.Drawing.Color.White;
+            this.txtDependentId.Location = new System.Drawing.Point(200, 172);
+            this.txtDependentId.MaxLength = 20;
+            this.txtDependentId.Name = "txtDependentId";
+            this.txtDependentId.Size = new System.Drawing.Size(132, 34);
+            this.txtDependentId.TabIndex = 0;
             // 
             // label4
             // 
@@ -275,61 +273,49 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Phone";
             // 
-            // label7
+            // txtDependentName
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(50, 520);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 26);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Address";
+            this.txtDependentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtDependentName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDependentName.ForeColor = System.Drawing.Color.White;
+            this.txtDependentName.Location = new System.Drawing.Point(200, 242);
+            this.txtDependentName.MaxLength = 20;
+            this.txtDependentName.Name = "txtDependentName";
+            this.txtDependentName.Size = new System.Drawing.Size(176, 30);
+            this.txtDependentName.TabIndex = 2;
             // 
-            // txtEmployeeName
+            // txtDependentDobD
             // 
-            this.txtEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtEmployeeName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.txtEmployeeName.Location = new System.Drawing.Point(200, 242);
-            this.txtEmployeeName.MaxLength = 20;
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(176, 30);
-            this.txtEmployeeName.TabIndex = 2;
+            this.txtDependentDobD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtDependentDobD.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.txtDependentDobD.ForeColor = System.Drawing.Color.White;
+            this.txtDependentDobD.Location = new System.Drawing.Point(200, 311);
+            this.txtDependentDobD.MaxLength = 20;
+            this.txtDependentDobD.Name = "txtDependentDobD";
+            this.txtDependentDobD.Size = new System.Drawing.Size(42, 34);
+            this.txtDependentDobD.TabIndex = 3;
             // 
-            // txtEmployeeDobD
+            // txtDependentDobY
             // 
-            this.txtEmployeeDobD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtEmployeeDobD.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtEmployeeDobD.ForeColor = System.Drawing.Color.White;
-            this.txtEmployeeDobD.Location = new System.Drawing.Point(200, 311);
-            this.txtEmployeeDobD.MaxLength = 20;
-            this.txtEmployeeDobD.Name = "txtEmployeeDobD";
-            this.txtEmployeeDobD.Size = new System.Drawing.Size(42, 34);
-            this.txtEmployeeDobD.TabIndex = 3;
+            this.txtDependentDobY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtDependentDobY.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.txtDependentDobY.ForeColor = System.Drawing.Color.White;
+            this.txtDependentDobY.Location = new System.Drawing.Point(294, 311);
+            this.txtDependentDobY.MaxLength = 20;
+            this.txtDependentDobY.Name = "txtDependentDobY";
+            this.txtDependentDobY.Size = new System.Drawing.Size(84, 34);
+            this.txtDependentDobY.TabIndex = 5;
             // 
-            // txtEmployeeDobY
+            // txtDependentDobM
             // 
-            this.txtEmployeeDobY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtEmployeeDobY.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtEmployeeDobY.ForeColor = System.Drawing.Color.White;
-            this.txtEmployeeDobY.Location = new System.Drawing.Point(294, 311);
-            this.txtEmployeeDobY.MaxLength = 20;
-            this.txtEmployeeDobY.Name = "txtEmployeeDobY";
-            this.txtEmployeeDobY.Size = new System.Drawing.Size(84, 34);
-            this.txtEmployeeDobY.TabIndex = 5;
-            // 
-            // txtEmployeeDobM
-            // 
-            this.txtEmployeeDobM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtEmployeeDobM.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtEmployeeDobM.ForeColor = System.Drawing.Color.White;
-            this.txtEmployeeDobM.Location = new System.Drawing.Point(248, 311);
-            this.txtEmployeeDobM.MaxLength = 20;
-            this.txtEmployeeDobM.Name = "txtEmployeeDobM";
-            this.txtEmployeeDobM.Size = new System.Drawing.Size(42, 34);
-            this.txtEmployeeDobM.TabIndex = 4;
+            this.txtDependentDobM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtDependentDobM.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.txtDependentDobM.ForeColor = System.Drawing.Color.White;
+            this.txtDependentDobM.Location = new System.Drawing.Point(248, 311);
+            this.txtDependentDobM.MaxLength = 20;
+            this.txtDependentDobM.Name = "txtDependentDobM";
+            this.txtDependentDobM.Size = new System.Drawing.Size(42, 34);
+            this.txtDependentDobM.TabIndex = 4;
             // 
             // txtPhone
             // 
@@ -342,77 +328,6 @@
             this.txtPhone.Size = new System.Drawing.Size(176, 34);
             this.txtPhone.TabIndex = 8;
             // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtAddress.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(200, 518);
-            this.txtAddress.MaxLength = 200;
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAddress.Size = new System.Drawing.Size(176, 69);
-            this.txtAddress.TabIndex = 9;
-            // 
-            // txtMontlySal
-            // 
-            this.txtMontlySal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtMontlySal.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtMontlySal.ForeColor = System.Drawing.Color.White;
-            this.txtMontlySal.Location = new System.Drawing.Point(576, 171);
-            this.txtMontlySal.MaxLength = 20;
-            this.txtMontlySal.Name = "txtMontlySal";
-            this.txtMontlySal.Size = new System.Drawing.Size(176, 34);
-            this.txtMontlySal.TabIndex = 10;
-            // 
-            // txtOTRate
-            // 
-            this.txtOTRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtOTRate.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtOTRate.ForeColor = System.Drawing.Color.White;
-            this.txtOTRate.Location = new System.Drawing.Point(576, 241);
-            this.txtOTRate.MaxLength = 20;
-            this.txtOTRate.Name = "txtOTRate";
-            this.txtOTRate.Size = new System.Drawing.Size(176, 34);
-            this.txtOTRate.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(424, 174);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 26);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Monthly Salary";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(424, 243);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 26);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "OT Rate";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(424, 312);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 26);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Allowences";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -421,29 +336,19 @@
             this.panel2.Size = new System.Drawing.Size(2, 416);
             this.panel2.TabIndex = 19;
             // 
-            // txtAllowances
-            // 
-            this.txtAllowances.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtAllowances.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
-            this.txtAllowances.ForeColor = System.Drawing.Color.White;
-            this.txtAllowances.Location = new System.Drawing.Point(576, 310);
-            this.txtAllowances.MaxLength = 20;
-            this.txtAllowances.Name = "txtAllowances";
-            this.txtAllowances.Size = new System.Drawing.Size(176, 34);
-            this.txtAllowances.TabIndex = 12;
-            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Transparent;
             this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegister.Enabled = false;
             this.btnRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
             this.btnRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Location = new System.Drawing.Point(668, 376);
+            this.btnRegister.Location = new System.Drawing.Point(680, 466);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(86, 37);
             this.btnRegister.TabIndex = 3;
@@ -494,34 +399,107 @@
             this.pnlDelUpd.BackColor = System.Drawing.Color.Transparent;
             this.pnlDelUpd.Controls.Add(this.btnDelete);
             this.pnlDelUpd.Controls.Add(this.btnUpdate);
-            this.pnlDelUpd.Location = new System.Drawing.Point(558, 361);
+            this.pnlDelUpd.Location = new System.Drawing.Point(570, 451);
             this.pnlDelUpd.Name = "pnlDelUpd";
             this.pnlDelUpd.Size = new System.Drawing.Size(206, 65);
             this.pnlDelUpd.TabIndex = 20;
             this.pnlDelUpd.Visible = false;
             // 
-            // btnAllEmployees
+            // label7
             // 
-            this.btnAllEmployees.BackColor = System.Drawing.Color.Transparent;
-            this.btnAllEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAllEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
-            this.btnAllEmployees.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnAllEmployees.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnAllEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllEmployees.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllEmployees.ForeColor = System.Drawing.Color.White;
-            this.btnAllEmployees.Image = global::PayrollSystem.Properties.Resources.next;
-            this.btnAllEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAllEmployees.Location = new System.Drawing.Point(531, 550);
-            this.btnAllEmployees.Name = "btnAllEmployees";
-            this.btnAllEmployees.Size = new System.Drawing.Size(221, 37);
-            this.btnAllEmployees.TabIndex = 3;
-            this.btnAllEmployees.Text = " View All Employees";
-            this.btnAllEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllEmployees.UseVisualStyleBackColor = false;
-            this.btnAllEmployees.Click += new System.EventHandler(this.btnAllEmployees_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(50, 520);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 26);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Empoyee ID";
             // 
-            // EmployeeForm
+            // txtEmployeeName
+            // 
+            this.txtEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtEmployeeName.Enabled = false;
+            this.txtEmployeeName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeName.ForeColor = System.Drawing.Color.White;
+            this.txtEmployeeName.Location = new System.Drawing.Point(590, 172);
+            this.txtEmployeeName.MaxLength = 20;
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(176, 30);
+            this.txtEmployeeName.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(428, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 26);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Employee Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(428, 242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(263, 26);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Dependents of this employee";
+            // 
+            // txtOtherDependents
+            // 
+            this.txtOtherDependents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtOtherDependents.Enabled = false;
+            this.txtOtherDependents.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOtherDependents.ForeColor = System.Drawing.Color.White;
+            this.txtOtherDependents.Location = new System.Drawing.Point(433, 282);
+            this.txtOtherDependents.MaxLength = 200;
+            this.txtOtherDependents.Multiline = true;
+            this.txtOtherDependents.Name = "txtOtherDependents";
+            this.txtOtherDependents.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtOtherDependents.Size = new System.Drawing.Size(333, 148);
+            this.txtOtherDependents.TabIndex = 21;
+            // 
+            // btnSearchEmp
+            // 
+            this.btnSearchEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchEmp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(157)))), ((int)(((byte)(157)))));
+            this.btnSearchEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnSearchEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnSearchEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchEmp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchEmp.ForeColor = System.Drawing.Color.White;
+            this.btnSearchEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchEmp.Image")));
+            this.btnSearchEmp.Location = new System.Drawing.Point(342, 517);
+            this.btnSearchEmp.Margin = new System.Windows.Forms.Padding(8);
+            this.btnSearchEmp.Name = "btnSearchEmp";
+            this.btnSearchEmp.Padding = new System.Windows.Forms.Padding(8);
+            this.btnSearchEmp.Size = new System.Drawing.Size(35, 35);
+            this.btnSearchEmp.TabIndex = 23;
+            this.btnSearchEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearchEmp.UseVisualStyleBackColor = false;
+            this.btnSearchEmp.Click += new System.EventHandler(this.btnSearchEmp_Click_1);
+            // 
+            // txtEmployeeId
+            // 
+            this.txtEmployeeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtEmployeeId.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.txtEmployeeId.ForeColor = System.Drawing.Color.White;
+            this.txtEmployeeId.Location = new System.Drawing.Point(200, 517);
+            this.txtEmployeeId.MaxLength = 20;
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.Size = new System.Drawing.Size(132, 34);
+            this.txtEmployeeId.TabIndex = 22;
+            // 
+            // DependentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -530,36 +508,34 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnAllEmployees);
-            this.Controls.Add(this.rbGenderFemale);
+            this.Controls.Add(this.pnlDelUpd);
             this.Controls.Add(this.btnSearchEmp);
+            this.Controls.Add(this.txtEmployeeId);
+            this.Controls.Add(this.txtOtherDependents);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.rbGenderFemale);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnSearchDepenedent);
             this.Controls.Add(this.rbGenderMale);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtEmployeeDobY);
-            this.Controls.Add(this.txtEmployeeDobM);
-            this.Controls.Add(this.txtEmployeeDobD);
-            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtDependentDobY);
+            this.Controls.Add(this.txtDependentDobM);
+            this.Controls.Add(this.txtDependentDobD);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtAllowances);
-            this.Controls.Add(this.txtOTRate);
-            this.Controls.Add(this.txtMontlySal);
             this.Controls.Add(this.txtEmployeeName);
-            this.Controls.Add(this.txtEmployeeId);
+            this.Controls.Add(this.txtDependentName);
+            this.Controls.Add(this.txtDependentId);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlDelUpd);
-            this.Controls.Add(this.btnRegister);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EmployeeForm";
+            this.Name = "DependentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -579,31 +555,29 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEmployeeId;
+        private System.Windows.Forms.TextBox txtDependentId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rbGenderMale;
         private System.Windows.Forms.RadioButton rbGenderFemale;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEmployeeName;
-        private System.Windows.Forms.TextBox txtEmployeeDobD;
-        private System.Windows.Forms.TextBox txtEmployeeDobY;
-        private System.Windows.Forms.TextBox txtEmployeeDobM;
+        private System.Windows.Forms.TextBox txtDependentName;
+        private System.Windows.Forms.TextBox txtDependentDobD;
+        private System.Windows.Forms.TextBox txtDependentDobY;
+        private System.Windows.Forms.TextBox txtDependentDobM;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtMontlySal;
-        private System.Windows.Forms.TextBox txtOTRate;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtAllowances;
-        private System.Windows.Forms.Button btnSearchEmp;
+        private System.Windows.Forms.Button btnSearchDepenedent;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel pnlDelUpd;
-        private System.Windows.Forms.Button btnAllEmployees;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEmployeeName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtOtherDependents;
+        private System.Windows.Forms.Button btnSearchEmp;
+        private System.Windows.Forms.TextBox txtEmployeeId;
     }
 }

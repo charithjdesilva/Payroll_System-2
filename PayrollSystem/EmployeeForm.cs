@@ -37,7 +37,7 @@ namespace PayrollSystem
         }
 
         string connectionString = "Data Source=CHARITH\\SQLEXPRESS;" +
-                                   "Initial Catalog=GrifindoToys;" +
+                                   "Initial Catalog=GryfindoSystemV2;" +
                                   "Integrated Security=SSPI;";
 
         Employee emp = new Employee();

@@ -271,6 +271,7 @@
             // txtNoOfAbsents
             // 
             this.txtNoOfAbsents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtNoOfAbsents.Enabled = false;
             this.txtNoOfAbsents.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
             this.txtNoOfAbsents.ForeColor = System.Drawing.Color.White;
             this.txtNoOfAbsents.Location = new System.Drawing.Point(253, 46);
@@ -321,6 +322,7 @@
             // txtHolidays
             // 
             this.txtHolidays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtHolidays.Enabled = false;
             this.txtHolidays.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
             this.txtHolidays.ForeColor = System.Drawing.Color.White;
             this.txtHolidays.Location = new System.Drawing.Point(253, 111);

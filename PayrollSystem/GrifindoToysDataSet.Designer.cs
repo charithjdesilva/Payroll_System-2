@@ -20,9 +20,9 @@ namespace PayrollSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GrifindoToysDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GrifindoToysV2DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GrifindoToysDataSet : global::System.Data.DataSet {
+    public partial class GrifindoToysV2DataSet : global::System.Data.DataSet {
         
         private AdminDataTable tableAdmin;
         
@@ -32,7 +32,7 @@ namespace PayrollSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GrifindoToysDataSet() {
+        public GrifindoToysV2DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace PayrollSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected GrifindoToysDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GrifindoToysV2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -142,7 +142,7 @@ namespace PayrollSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GrifindoToysDataSet cln = ((GrifindoToysDataSet)(base.Clone()));
+            GrifindoToysV2DataSet cln = ((GrifindoToysV2DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -223,9 +223,9 @@ namespace PayrollSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GrifindoToysDataSet";
+            this.DataSetName = "GrifindoToysV2DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GrifindoToysDataSet.xsd";
+            this.Namespace = "http://tempuri.org/GrifindoToysV2DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAdmin = new AdminDataTable();
@@ -257,7 +257,7 @@ namespace PayrollSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GrifindoToysDataSet ds = new GrifindoToysDataSet();
+            GrifindoToysV2DataSet ds = new GrifindoToysV2DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -523,7 +523,7 @@ namespace PayrollSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GrifindoToysDataSet ds = new GrifindoToysDataSet();
+                GrifindoToysV2DataSet ds = new GrifindoToysV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -860,7 +860,7 @@ namespace PayrollSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GrifindoToysDataSet ds = new GrifindoToysDataSet();
+                GrifindoToysV2DataSet ds = new GrifindoToysV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1106,7 +1106,7 @@ namespace PayrollSystem {
         }
     }
 }
-namespace PayrollSystem.GrifindoToysDataSetTableAdapters {
+namespace PayrollSystem.GrifindoToysV2DataSetTableAdapters {
     
     
     /// <summary>
@@ -1263,7 +1263,7 @@ namespace PayrollSystem.GrifindoToysDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PayrollSystem.Properties.Settings.Default.GrifindoToysConnectionString;
+            this._connection.ConnectionString = global::PayrollSystem.Properties.Settings.Default.GrifindoToysV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1280,7 +1280,7 @@ namespace PayrollSystem.GrifindoToysDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GrifindoToysDataSet.AdminDataTable dataTable) {
+        public virtual int Fill(GrifindoToysV2DataSet.AdminDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1293,9 +1293,9 @@ namespace PayrollSystem.GrifindoToysDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GrifindoToysDataSet.AdminDataTable GetData() {
+        public virtual GrifindoToysV2DataSet.AdminDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GrifindoToysDataSet.AdminDataTable dataTable = new GrifindoToysDataSet.AdminDataTable();
+            GrifindoToysV2DataSet.AdminDataTable dataTable = new GrifindoToysV2DataSet.AdminDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1303,14 +1303,14 @@ namespace PayrollSystem.GrifindoToysDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GrifindoToysDataSet.AdminDataTable dataTable) {
+        public virtual int Update(GrifindoToysV2DataSet.AdminDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GrifindoToysDataSet dataSet) {
+        public virtual int Update(GrifindoToysV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Admin");
         }
         
@@ -1621,7 +1621,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PayrollSystem.Properties.Settings.Default.GrifindoToysConnectionString;
+            this._connection.ConnectionString = global::PayrollSystem.Properties.Settings.Default.GrifindoToysV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1639,7 +1639,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GrifindoToysDataSet.EmployeeDataTable dataTable) {
+        public virtual int Fill(GrifindoToysV2DataSet.EmployeeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1652,9 +1652,9 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GrifindoToysDataSet.EmployeeDataTable GetData() {
+        public virtual GrifindoToysV2DataSet.EmployeeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GrifindoToysDataSet.EmployeeDataTable dataTable = new GrifindoToysDataSet.EmployeeDataTable();
+            GrifindoToysV2DataSet.EmployeeDataTable dataTable = new GrifindoToysV2DataSet.EmployeeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1662,14 +1662,14 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GrifindoToysDataSet.EmployeeDataTable dataTable) {
+        public virtual int Update(GrifindoToysV2DataSet.EmployeeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GrifindoToysDataSet dataSet) {
+        public virtual int Update(GrifindoToysV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Employee");
         }
         
@@ -1978,7 +1978,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(GrifindoToysDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GrifindoToysV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._adminTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Admin.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2006,7 +2006,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(GrifindoToysDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GrifindoToysV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._adminTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Admin.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2032,7 +2032,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(GrifindoToysDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GrifindoToysV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._employeeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Employee.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2082,7 +2082,7 @@ SELECT EmployeeID, Emp_name, Emp_dob, Emp_gender, Emp_phone, Emp_address FROM Em
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(GrifindoToysDataSet dataSet) {
+        public virtual int UpdateAll(GrifindoToysV2DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

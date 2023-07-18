@@ -46,12 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dependent.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="AllEmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllEmployeesForm.Designer.cs">
       <DependentUpon>AllEmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DependentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DependentForm.Designer.cs">
+      <DependentUpon>DependentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
     </Compile>
     <Compile Include="GrifindoToysDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -69,6 +82,12 @@
     </Compile>
     <Compile Include="SalaryForm.Designer.cs">
       <DependentUpon>SalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyForm.Designer.cs">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
@@ -93,11 +112,20 @@
     <EmbeddedResource Include="AllEmployeesForm.resx">
       <DependentUpon>AllEmployeesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DependentForm.resx">
+      <DependentUpon>DependentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalaryForm.resx">
       <DependentUpon>SalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyForm.resx">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
