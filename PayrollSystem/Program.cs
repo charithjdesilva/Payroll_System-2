@@ -17,8 +17,10 @@ namespace PayrollSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new Login());
+            Application.Run(new Login());
 
+            //Application.Run(new HolidayForm("user"));
+            //Application.Run(new LeaveForm("user"));
             //Application.Run(new DepartmentForm("user"));
             //Application.Run(new FacultyForm("user"));
             //Application.Run(new DependentForm("user"));
@@ -26,7 +28,7 @@ namespace PayrollSystem
             //Application.Run(new EmployeeForm("user"));
             //Application.Run(new AllEmployeesForm("user"));
             //Application.Run(new SettingsForm("user"));
-            Application.Run(new SalaryForm("user"));
+            //Application.Run(new SalaryForm("user"));
         }
     }
 }

@@ -264,7 +264,14 @@ namespace PayrollSystem
                 txtEmployeeId.Enabled = true;
                 clearValues();
 
-                
+                // enable date input fields to the user
+                txtSalBeginD.Enabled = true;
+                txtSalBeginM.Enabled = true;
+                txtSalBeginY.Enabled = true;
+
+                txtSalEndD.Enabled = true;
+                txtSalEndM.Enabled = true;
+                txtSalEndY.Enabled = true;
             }
             else
             {
@@ -276,6 +283,15 @@ namespace PayrollSystem
                     btnSearchEmp.Image = Properties.Resources.refresh;
                     txtEmployeeId.Enabled = false;
 
+
+                    // disable date input fields to the user
+                    txtSalBeginD.Enabled = false;
+                    txtSalBeginM.Enabled = false;
+                    txtSalBeginY.Enabled = false;
+
+                    txtSalEndD.Enabled = false;
+                    txtSalEndM.Enabled = false;
+                    txtSalEndY.Enabled = false;
 
                     // salaryBeginDate, salaryEndDate
                     DateTime salaryBeginDate;

@@ -47,6 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dependent.cs" />
+    <Compile Include="Leave.cs" />
+    <Compile Include="Holiday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holiday.Designer.cs">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveForm.Designer.cs">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="AllEmployeesForm.cs">
       <SubType>Form</SubType>
@@ -111,6 +124,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AllEmployeesForm.resx">
       <DependentUpon>AllEmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holiday.resx">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveForm.resx">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DependentForm.resx">
       <DependentUpon>DependentForm.cs</DependentUpon>

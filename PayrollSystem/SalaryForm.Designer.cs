@@ -150,7 +150,7 @@
             this.lblName.Location = new System.Drawing.Point(261, 87);
             this.lblName.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(273, 20);
+            this.lblName.Size = new System.Drawing.Size(273, 36);
             this.lblName.TabIndex = 11;
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
